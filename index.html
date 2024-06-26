@@ -1,178 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
     <title>@y6t</title>
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="y6t.lol">
-    <meta property="og:url" content="https://y6t.lol/">
-    <meta property="og:title" content="@y6t">
-    <meta property="og:description" content="~100% skid">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1214721591305445407/1216085730263306290/23ef8dd408a832eaa77b69a0736ed7cd.jpg?ex=65ff1b17&is=65eca617&hm=cf1e54ee6cff3165ae6fade9801b15fb5be3b64abc4a4cdc014f59aad5a827d8&">
 </head>
 
-<style>
-    html {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    body {
-        background-color:#060707;
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-        text-align: center;
-        color: white;
-    }
-
-    #blur-box {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 31px;
-        width: 35%;
-        background-color: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(15px);
-        border-radius: 10px;
-        color: rgba(255, 255, 255, 0.774);
-        text-align: center;
-        animation: fadein 1s forwards;
-    }
-
-    #profile-picture {
-        width: 100px;
-        height: 100px;
-        background-color: #ffffff00;
-        border-radius: 50%;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-    }
-
-    #profile-picture img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #username {
-        font-size: 35px;
-        margin-top: 130px;
-        text-shadow: 0 0 15px rgb(255, 255, 255);
-    }
-
-    #bio {
-        font-size: 18px;
-        margin-top: 10px;
-        text-shadow: 0 0 15px rgba(246, 246, 246, 0.8);
-    }
-
-    #video-background {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        animation: fadein 1s forwards;
-    }
-
-    .glowing-text {
-        color: rgb(255, 225, 0);
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    }
-
-    .next {
-        top: 50%;
-        left: 50%;
-        color: #fff;
-        position: absolute;
-        font-weight: normal;
-        font-size: 20px;
-        transform: translate(-50%, -50%);
-        font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    }
-
-    .social-icon {
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-        margin: 10px;
-        font-size: 34px;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-        transition: transform 0.3s ease-in-out; 
-    }
-
-    .social-icon:hover {
-        color: #ffffff;
-        transform: scale(1.2);
-    }
-
-    @keyframes fadeout {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
-    @keyframes fadein {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-</style>
-
 <body>
-    <div id="button"><b class="next glowing-text">c l i c k</b></div>
-
-    <div id="blur-box">
-        <div id="profile-picture">
-            <img src="https://cdn.discordapp.com/attachments/1219570285611843625/1255504874380984330/pfp.png.png?ex=667d5f88&is=667c0e08&hm=ec189322fd1e0869240b3ff2018a83b4d8191570d53dba0abfe925c4b37b99d6&" alt="Profile Picture">
-        </div>
-        <div id="username">y6t</div>
-        <div id="bio">skidatron</div>
-
-        <a href="https://t.me/y6txr" class="social-icon"><img src="icons/telegram.png"/></a>
-        <a href="https://www.instagram.com/hqrming/" class="social-icon"><img src="instagram.png"/></a>
-        <a href="https://twitter.com/osintlord" class="social-icon"><img src="icons/twitter.png"/></a>
+    <div class="overlay" id="overlay">
+        <div class="proceed-button" onclick="removeOverlay()">click >.<</div>
     </div>
+    <video id="backgroundVideo" loop muted> <source src="y6t.mp4" type="video/mp4"></video>
+    <audio id="madaraAudio" src="y6tn.mp3" loop></audio>
+    <div class="glass-box">
+        <pre>
 
-    <video id="video-background" autoplay muted loop>
-        <source src="back.mp4" type="video/mp4">
-    </video>
+        </pre>
+        <div class="icons">
+            <div class="icon-container">
+                <i class="fas fa-crown"></i>
+                <span class="icon-text">@PRIVER</span>
+            </div>
+        <div class="icon-container">
+            <i class="fas fa-code"></i>
+            <span class="icon-text">@dev</span>
+        </div>
+            <div class="icon-container">
+                <i class="fas fa-gun"></i>
+                <span class="icon-text">@gang</span>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-dollar"></i>
+                <span class="icon-text">@broke</span>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-gem"></i>
+                <span class="icon-text">@vip</span>
+            </div>
+        </div>
+        <div id="footer">
+            <span id="typing-text" class="typewriter"></span>
+        </div>
+        <div class="dabox">
+            <a href="https://t.me/y6txr">
+                <button class="tooltip-button">
+                    <i class="telegram.png"></i>
+                    <span class="button-tooltip">telegram</span>
+                </button>
+            </a>
+            <a href="https://twitter.com/osintlord">
+                <button class="tooltip-button">
+                    <i class="fas fa-globe globe-icon" aria-hidden="true"></i>
+                    <span class="button-tooltip">twitter</span>
+                </button>
+            </a>
+        </div>
+    </div>
+    <script>
+        function playBackgroundVideo() {
+            var video = document.getElementById('backgroundVideo');
+            video.play();
+        }
 
-    <audio id="audio-background" autoplay loop>
-        <source src="C:\Users\y6txr\Pictures\audios\lookatme.mp3" type="audio/mpeg">
-    </audio>
+        function playAudio() {
+            var audio = document.getElementById('madaraAudio');
+            audio.volume = 0.4;
+            audio.play();
+        }
 
-   <script>
-        document.getElementById("button").addEventListener("click", function () {
-            var button = this;
-            button.style.animation = "fadeout 1s forwards";
+        function removeOverlay() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+            playBackgroundVideo();
+            playAudio();
+            typeText();
+        }
 
-            document.getElementById("blur-box").style.display = "block";
-            document.getElementById("video-background").style.display = "block";
-            document.getElementById("audio-background").play();
-        });
+        const textElement = document.getElementById("typing-text");
+        const texts = ["100% skid ", "harmless", "@y6t"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            if (isDeleting) {
+                textElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeText, 6000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeText, 1000);
+            } else {
+                setTimeout(typeText, 200);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeText);
     </script>
 </body>
-</html>
+<!-- GSAP Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
 
+<div id="thunderstorm">
+  <div id="raindrop"></div>
+  <div id="lightning"></div>
+</div>
+
+</html>
