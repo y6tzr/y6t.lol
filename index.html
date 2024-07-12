@@ -1,132 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>@actavis ~ y6t.lol</title>
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="y6t.lol">
+        <meta property="og:url" content="https://y6t.lol/">
+        <meta property="og:title" content="@y6t ~ y6t.lol">
+        <meta property="og:description" content="100% skid, 0% gay">
+        <meta property="og:image" content="pfp.png">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
-    <title>@y6t</title>
-</head>
-
-<body>
-    
-    <video id="backgroundVideo" loop muted> <source src="nice.mp4" type="video/mp4"></video>
-    <audio id="madaraAudio" src="nice.mp3" loop></audio>
-    <div class="glass-box">
-        <pre>
-            ______     __     
-           /      \   |  \    
- __    __ |  $$$$$$\ _| $$_   
-|  \  |  \| $$___\$$|   $$ \  
-| $$  | $$| $$    \  \$$$$$$  
-| $$  | $$| $$$$$$$\  | $$ __ 
-| $$__/ $$| $$__/ $$  | $$|  \
- \$$    $$ \$$    $$   \$$  $$
- _\$$$$$$$  \$$$$$$     \$$$$ 
-|  \__| $$                    
- \$$    $$                    
-  \$$$$$$                   
-
-        </pre>
-        <div class="icons">
-            <div class="icon-container">
-                <i class="fas fa-crown"></i>
-                <span class="icon-text">@PRIVER</span>
-            </div>
-        <div class="icon-container">
-            <i class="fas fa-code"></i>
-            <span class="icon-text">@dev</span>
-        </div>
-            <div class="icon-container">
-                <i class="fas fa-gun"></i>
-                <span class="icon-text">@gang</span>
-            </div>
-            <div class="icon-container">
-                <i class="fas fa-dollar"></i>
-                <span class="icon-text">@broke</span>
-            </div>
-            <div class="icon-container">
-                <i class="fas fa-gem"></i>
-                <span class="icon-text">@vip</span>
-            </div>
-        </div>
-        <div id="footer">
-            <span id="typing-text" class="typewriter"></span>
-        </div>
-        <div class="dabox">
-            <a href="https://t.me/y6txr">
-                <button class="tooltip-button">
-                    <i class="fas fa-globe globe-icon" aria-hidden="true"></i>
-                    <span class="button-tooltip">telegram</span>
-                </button>
-            </a>
-            <a href="https://twitter.com/osintlord">
-                <button class="tooltip-button">
-                    <i class="fas fa-globe globe-icon" aria-hidden="true"></i>
-                    <span class="button-tooltip">twitter</span>
-                </button>
-            </a>
-        </div>
-    </div>
-    <script>
-        function playBackgroundVideo() {
-            var video = document.getElementById('backgroundVideo');
-            video.play();
+    <style>
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
-        function playAudio() {
-            var audio = document.getElementById('madaraAudio');
-            audio.volume = 0.4;
-            audio.play();
+        body {
+            background-color:#060707;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+            text-align: center;
+            color: white;
         }
 
-        function removeOverlay() {
-            var overlay = document.getElementById('overlay');
-            overlay.style.display = 'none';
-            playBackgroundVideo();
-            playAudio();
-            typeText();
+        #blur-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 31px;
+            width: 30%;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.774);
+            text-align: center;
+            animation: fadein 1s forwards;
         }
 
-        const textElement = document.getElementById("typing-text");
-        const texts = ["100% skid ", "harmless", "fellow alpha male];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+        #profile-picture {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff00;
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
 
-        function typeText() {
-            const currentText = texts[textIndex];
-            if (isDeleting) {
-                textElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                textElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
+        #profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #username {
+            font-size: 35px;
+            margin-top: 86px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        #bio {
+            font-size: 18px;
+            margin-top: 1px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        #video-background {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            animation: fadein 1s forwards;
+        }
+
+        .glowing-text {
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .next {
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            position: absolute;
+            font-weight: normal;
+            font-size: 20px;
+            transform: translate(-50%, -50%);
+            font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+        }
+
+        @keyframes fadeout {
+            from {
+                opacity: 1;
             }
 
-            if (!isDeleting && charIndex === currentText.length) {
-                isDeleting = true;
-                setTimeout(typeText, 6000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                setTimeout(typeText, 1000);
-            } else {
-                setTimeout(typeText, 200);
+            to {
+                opacity: 0;
             }
         }
 
-        document.addEventListener("DOMContentLoaded", typeText);
-    </script>
-</body>
-<!-- GSAP Animation Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
 
-<div id="thunderstorm">
-  <div id="raindrop"></div>
-  <div id="lightning"></div>
-</div>
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 
+    <body>
+        <div id="button"><b class="next glowing-text">Click To Continue</b></div>
+
+        <div id="blur-box">
+            <div id="profile-picture">
+                <img src="files/pfp.png" alt="Profile Picture">
+            </div>
+            <div id="username">actavis</div>
+            <div id="bio">nigga</div>
+        </div>
+
+        <video id="video-background" loop>
+            <source src="files/video.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            document.getElementById("button").addEventListener("click", function () {
+                var button = this;
+                button.style.animation = "fadeout 1s forwards";
+
+                var video = document.getElementById("video-background"); 
+                document.getElementById("blur-box").style.display = "block";
+                document.getElementById("video-background").style.display = "block";
+                video.play();
+            });
+        </script>
+    </body>
 </html>
