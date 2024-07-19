@@ -1,3 +1,1 @@
-this nigga y6t enslaved me and extorted me to fix his skidded ass site...
-
-- actavis da baller
+t.me/y6txr
