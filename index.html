@@ -1,155 +1,78 @@
 <!DOCTYPE html>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
 <html>
-    <head>
-        <title>@y6t ~ y6t</title>
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="y6t.lol">
-        <meta property="og:url" content="https://y6t.lol/">
-        <meta property="og:title" content="@y6t ~ y6t.lol">
-        <meta property="og:description" content="100% skid, 0% faggot">
-        <meta property="og:image" content="https://y6t.lol/files/profilepic.jpg">
-    </head>
+<head>
+    <title>@y6t ~ y6t.lol</title>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
 
-    <style>
-        html {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        body {
-            background-color:#060707;
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-            text-align: center;
-            color: white;
-        }
-
-        #blur-box {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 31px;
-            width: 30%;
-            background-color: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(15px);
-            border-radius: 10px;
-            color: rgba(255, 255, 255, 0.774);
-            text-align: center;
-            animation: fadein 1s forwards;
-        }
-
-        #profile-picture {
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff00;
-            border-radius: 50%;
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-        }
-
-        #profile-picture img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #username {
-            font-size: 35px;
-            margin-top: 86px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-        }
-
-        #bio {
-            font-size: 18px;
-            margin-top: 1px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-        }
-
-        #video-background {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            animation: fadein 1s forwards;
-        }
-
-        .glowing-text {
-            color: white;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-        }
-
-        .next {
-            top: 50%;
-            left: 50%;
-            color: #fff;
-            position: absolute;
-            font-weight: normal;
-            font-size: 20px;
-            transform: translate(-50%, -50%);
-            font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-        }
-
-        @keyframes fadeout {
-            from {
-                opacity: 1;
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) {
+                return false;
             }
-
-            to {
-                opacity: 0;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
             }
         }
+    </script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="y6t.lol">
+<meta property="og:url" content="https://y6t.lol">
+<meta property="og:title" content="@y6t ~ im sigma">
+<meta property="og:description" content="click me baby >_<">
+<script>
+    const titles = ["y6t is skibidi rizz", "im sigma >_<", "baby gronk", "i did that (maybe)", "penis fart", "lol noob", "are u a skid?", "silly man", "if your 40 hmu", "->hello<-", "-->sigma alpha male rizz<--","--->/playfab<---"];
 
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
+    function changeTitle() {
+        let index = 0;
+        return function() {
+            document.title = titles[index];
+            index = (index + 1) % titles.length;
+        };
+    }
 
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    setInterval(changeTitle(), 150);
+</script>
+<link rel="stylesheet" href="style.css">
 
-    <body>
-        <div id="button"><b class="next glowing-text">Click To Continue</b></div>
+</head>
 
-        <div id="blur-box">
-            <div id="profile-picture">
-                <img src="files/profilepic.jpg" alt="Profile Picture">
-            </div>
-            <div id="username">y6t</div>
-            <div id="bio">silly</div>
-        </div>
+<body>
+<div id="button"><b class="next glowing-text">press me >_0</b></div>
+<div id="blur-box1">
+<div id="profile-picture">
+<img src="image/pfpl.png" alt="Profile Picture">
+</div>
+<div id="username">ovrdsin <3 </div>
+<div id="bio">discord.gg/playfab | discord: protemuslave | im a skid.</div>
+<a href="https://instagram/hqrming" class="social-icon"><img src="https://files.catbox.moe/r1qf5d.webp" /></a>
+<a href="https://discord.gg/playfab" class="discord-stuff"><img src="image/dicord.png" /></a>
+<a href="https://twitter.com/protemuslave" class="social-icon"><img src="https://files.catbox.moe/3qokmj.webp" /></a>
+</div>
+<video id="video-background" loop>
+<source src="videos/backinlongbeach.mp4" type="video/mp4">
+</video>
+<script>
+        document.getElementById("button").addEventListener("click", function () {
+            var button = this;
+            button.style.animation = "fadeout 1s forwards";
 
-        <audio id="video-background" loop>
-            <source src="files/audio.mp3" type="audio/mp3">
-        </audio>
-
-        <script>
-            document.getElementById("button").addEventListener("click", function () {
-                var button = this;
-                button.style.animation = "fadeout 1s forwards";
-
-                var video = document.getElementById("video-background"); 
-                document.getElementById("blur-box").style.display = "block";
-                document.getElementById("video-background").style.display = "block";
-                video.play();
-            });
-        </script>
-    </body>
+            var bgAudio = document.getElementById("video-background"); 
+            document.getElementById("blur-box1").style.display = "block";
+            document.getElementById("video-background").style.display = "block";
+            bgAudio.play();
+        });
+</script>
+</body>
 </html>
