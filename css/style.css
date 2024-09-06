@@ -1,3 +1,4 @@
+/* General reset and text selection disabling */
 html {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -8,7 +9,7 @@ html {
 }
 
 body {
-    background-color:#060707;
+    background-color: #060707;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -17,6 +18,7 @@ body {
     color: white;
 }
 
+/* Blur Box styling */
 #blur-box1 {
     display: none;
     position: fixed;
@@ -28,15 +30,16 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     animation: fadein 1s forwards;
 }
 
+/* Profile Picture styling */
 #profile-picture {
     width: 100px;
     height: 100px;
-    background-color: #ffffff00;
+    background-color: transparent;
     border-radius: 50%;
     position: absolute;
     top: 30%;
@@ -51,6 +54,7 @@ body {
     object-fit: cover;
 }
 
+/* Username and bio */
 #username {
     font-size: 35px;
     margin-top: 130px;
@@ -63,6 +67,7 @@ body {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+/* Video background styling */
 #video-background {
     display: none;
     position: absolute;
@@ -75,22 +80,25 @@ body {
     animation: fadein 1s forwards;
 }
 
+/* Glowing text */
 .glowing-text {
     color: white;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
+/* Button styling */
 .next {
+    position: absolute;
     top: 50%;
     left: 50%;
     color: #fff;
-    position: absolute;
     font-weight: normal;
     font-size: 20px;
     transform: translate(-50%, -50%);
     font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
 }
 
+/* Social icons */
 .social-icon {
     display: inline-block;
     width: 32px;
@@ -98,9 +106,10 @@ body {
     margin: 10px;
     font-size: 34px;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Discord styling */
 .discord-stuff {
     display: inline-block;
     width: 32px;
@@ -108,19 +117,20 @@ body {
     margin: 12px;
     font-size: 34px;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Hover effect for social icons */
 .social-icon:hover {
     color: #ffffff;
     transform: scale(1.2);
 }
 
+/* Fade in/out animations */
 @keyframes fadeout {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
@@ -130,9 +140,7 @@ body {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
-
