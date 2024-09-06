@@ -1,69 +1,87 @@
 <!DOCTYPE html>
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="y6t.lol">
+    <meta property="og:url" content="https://y6t.lol">
+    <meta property="og:title" content="@y6t ~ im sigma">
+    <meta property="og:description" content="click me baby >_<">
     <title>@y6t ~ y6t.lol</title>
+
+    <!-- Disable DevTool -->
+    <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+
+    <!-- Preventing Right Click and Certain Key Combinations -->
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
 
         document.onkeydown = function(e) {
-            if (e.keyCode == 123) {
+            if (e.keyCode == 123 ||  // F12
+                (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||  // Ctrl+Shift+I/C/J
+                (e.ctrlKey && e.key.toUpperCase() === 'U')) {  // Ctrl+U
                 return false;
             }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                return false;
-            }
-        }
-    </script>
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="y6t.lol">
-<meta property="og:url" content="https://y6t.lol">
-<meta property="og:title" content="@y6t ~ im sigma">
-<meta property="og:description" content="click me baby >_<">
-<script>
-    const titles = ["y6t is skibidi rizz", "im sigma >_<", "baby gronk", "i did that (maybe)", "penis fart", "lol noob", "are u a skid?", "silly man", "if your 40 hmu", "->hello<-", "-->sigma alpha male rizz<--","--->/playfab<---"];
-
-    function changeTitle() {
-        let index = 0;
-        return function() {
-            document.title = titles[index];
-            index = (index + 1) % titles.length;
         };
-    }
+    </script>
 
-    setInterval(changeTitle(), 150);
-</script>
-<link rel="stylesheet" href="css/style.css">
+    <!-- Dynamic Title Change -->
+    <script>
+        const titles = [
+            "y6t is skibidi rizz", "im sigma >_<", "baby gronk", 
+            "i did that (maybe)", "penis fart", "lol noob", 
+            "are u a skid?", "silly man", "if your 40 hmu", 
+            "->hello<-", "-->sigma alpha male rizz<--", "--->/playfab<---"
+        ];
 
+        function changeTitle() {
+            let index = 0;
+            return function() {
+                document.title = titles[index];
+                index = (index + 1) % titles.length;
+            };
+        }
+
+        setInterval(changeTitle(), 150);
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<div id="button"><b class="next glowing-text">press me >_0</b></div>
-<div id="blur-box1">
-<div id="profile-picture">
-<img src="https://files.catbox.moe/62t9iu.jpg" alt="Profile Picture">
-</div>
-<div id="username">y6t <3 </div>
-<div id="bio">discord.gg/csinting | discord: xz2 | im a skid.</div>
-<a href="https://instagram/hqrming" class="social-icon"><img src="media/instagram.png"/></a>
-<a href="https://t.me/y6tlol" class="social-icon"><img src="media/telegram.png"/></a>
-</div>
-<video id="video-background" loop>
-<source src="media/On.mp4" type="video/mp4">
-</video>
-<script>
-        document.getElementById("button").addEventListener("click", function () {
+    <!-- Button and Profile -->
+    <div id="button">
+        <b class="next glowing-text">press me >_0</b>
+    </div>
+
+    <div id="blur-box1" style="display: none;">
+        <div id="profile-picture">
+            <img src="https://files.catbox.moe/62t9iu.jpg" alt="Profile Picture">
+        </div>
+        <div id="username">y6t <3 </div>
+        <div id="bio">discord.gg/csinting | discord: xz2 | im a skid.</div>
+
+        <!-- Social Links -->
+        <a href="https://www.instagram.com/hqrming" class="social-icon">
+            <img src="media/instagram.png" alt="Instagram"/>
+        </a>
+        <a href="https://www.t.me/hijackins" class="social-icon">
+            <img src="media/instagram.png" alt="Telegram"/>
+        </a>
+    </div>
+
+    <!-- Video Background -->
+    <video id="video-background" loop style="display: none;">
+        <source src="media/On.mp4" type="video/mp4">
+    </video>
+
+    <!-- Button Click Script -->
+    <script>
+        document.getElementById("button").addEventListener("click", function() {
             var button = this;
             button.style.animation = "fadeout 1s forwards";
 
@@ -72,6 +90,6 @@
             document.getElementById("video-background").style.display = "block";
             bgAudio.play();
         });
-</script>
+    </script>
 </body>
 </html>
