@@ -34,7 +34,7 @@
             "y6t is skibidi rizz", "im sigma >_<", "baby gronk", 
             "i did that (maybe)", "penis fart", "lol noob", 
             "are u a skid?", "silly man", "if your 40 hmu", 
-            "->hello<-", "-->sigma alpha male rizz<--", "--->/playfab<---"
+            "->hello<-", "-->sigma alpha male rizz<--", "--->/hru<---"
         ];
 
         function changeTitle() {
@@ -45,11 +45,22 @@
             };
         }
 
-        setInterval(changeTitle(), 150);
+        setInterval(changeTitle, 150);  <!-- Fixed this line -->
     </script>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fadeout Animation (Added missing CSS) -->
+    <style>
+        @keyframes fadeout {
+            from { opacity: 1; }
+            to { opacity: 0; display: none; }
+        }
+        #button {
+            animation: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,7 +83,7 @@
     </div>
 
     <!-- Video Background -->
-    <video id="video-background" loop style="display: none;">
+    <video id="video-background" loop muted style="display: none;">
         <source src="media/On.mp4" type="video/mp4">
     </video>
 
@@ -85,6 +96,7 @@
             var bgAudio = document.getElementById("video-background"); 
             document.getElementById("blur-box1").style.display = "block";
             document.getElementById("video-background").style.display = "block";
+            bgAudio.muted = false;  // Unmute the video
             bgAudio.play();
         });
     </script>
