@@ -1,104 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Y6t</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="y6t.lol">
-    <meta property="og:url" content="https://y6t.lol">
-    <meta property="og:title" content="@y6t ~ im sigma">
-    <meta property="og:description" content="click me baby >_<">
-    <title>@y6t ~ y6t.lol</title>
-
-    <!-- Disable DevTool -->
-    <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
-
-    <!-- Preventing Right Click and Certain Key Combinations -->
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        document.onkeydown = function(e) {
-            if (e.keyCode == 123 ||  // F12
-                (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||  // Ctrl+Shift+I/C/J
-                (e.ctrlKey && e.key.toUpperCase() === 'U')) {  // Ctrl+U
-                return false;
-            }
-        };
-    </script>
-
-    <!-- Dynamic Title Change -->
-    <script>
-        const titles = [
-            "y6t is skibidi rizz", "im sigma >_<", "baby gronk", 
-            "i did that (maybe)", "penis fart", "lol noob", 
-            "are u a skid?", "silly man", "if your 40 hmu", 
-            "->hello<-", "-->sigma alpha male rizz<--", "--->/hru<---"
-        ];
-
-        function changeTitle() {
-            let index = 0;
-            return function() {
-                document.title = titles[index];
-                index = (index + 1) % titles.length;
-            };
-        }
-
-        setInterval(changeTitle, 150);  <!-- Fixed this line -->
-    </script>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Fadeout Animation (Added missing CSS) -->
-    <style>
-        @keyframes fadeout {
-            from { opacity: 1; }
-            to { opacity: 0; display: none; }
-        }
-        #button {
-            animation: none;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    <!-- Button and Profile -->
-    <div id="button">
-        <b class="next glowing-text">press me >_0</b>
-    </div>
-
-    <div id="blur-box1" style="display: none;">
-        <div id="profile-picture">
-            <img src="https://files.catbox.moe/lstifa.jpg" alt="Profile Picture">
+<body onclick="document.getElementById('audio').play()">
+    <notice><p>csint.tools</p></notice>
+    <div class="container">
+        <div class="outer-border rotator">
+            <div class="inner-border">
+                <div class="content">
+                    <p>Unlock a suite of specialized resources and projects for advanced information gathering</p><br><br><br><br>
+                    <img class="discord" src="(https://lanyard.cnrad.dev/api/1244678545029202010)](https://discord.com/users/1244678545029202010)"></img>
+                    <div class="pillbox">
+                        <a href="https://discord.gg/csinting" class="pill"><i class="fab fa-discord"></i> Discord</a>
+                        <a href="tg://resolve?domain=hijackins" class="pill"><i class="fab fa-telegram"></i> Telegram</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="username">y6t <3 </div>
-        <div id="bio">discord.gg/csinting | discord: xz2 | im a skid.</div>
-
-        <!-- Social Links -->
-        <a href="https://www.t.me/hijackins" class="social-icon">
-            <img src="media/telegram.png" alt="telegram"/>
-        </a>
     </div>
-
-    <!-- Video Background -->
-    <video id="video-background" loop muted style="display: none;">
-        <source src="media/On.mp4" type="video/mp4">
-    </video>
-
-    <!-- Button Click Script -->
-    <script>
-        document.getElementById("button").addEventListener("click", function() {
-            var button = this;
-            button.style.animation = "fadeout 1s forwards";
-
-            var bgAudio = document.getElementById("video-background"); 
-            document.getElementById("blur-box1").style.display = "block";
-            document.getElementById("video-background").style.display = "block";
-            bgAudio.muted = false;  // Unmute the video
-            bgAudio.play();
-        });
-    </script>
+    <div id="snow">
+        <script src="snow.js"></script>
+        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1345" height="955"></canvas>
+    </div>
+    <audio id="audio" loop="" autoplay>
+        <source src="audio.mp3" type="audio/mpeg">Your browser does not support the <code>audio</code> element.
+    </audio>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c49ab8439f1ce5e","version":"2024.8.0","r":1,"token":"b36da36f9e4947669ee5d1bb63a8c54a","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}}}' crossorigin="anonymous"></script>
 </body>
 </html>
