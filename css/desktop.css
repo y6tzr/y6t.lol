@@ -156,12 +156,11 @@ body {
 }
 
 #toolbar .toolbar-icon.ie {
-  background-image: url(../images/y6t.png);
+  background-image: url(../images/y6tk.png);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   z-index: 100 !important;
 }
-
 
 #toolbar .toolbar-right {
   float: right;
@@ -191,6 +190,12 @@ body {
   background-repeat: no-repeat;
   background-size: 48px 48px;
   z-index: 100 !important;
+}
+
+.desktop-icons .desktop-icon.folder {
+  background-image: url(../images/folder.png);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
 }
 
 .custom-button {
