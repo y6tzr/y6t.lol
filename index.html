@@ -1,7 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
-
-  <!--Why are you browsing the index.html content? are you thinking of "borrowing" the site? lol-->
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Cache-control" content="public">
@@ -9,14 +8,12 @@
 
   <link rel="preload" href="WOFF/FreeSerif-YO4a.woff" as="font" type="font/woff">
   <link rel="preload" href="WOFF/jackeyfont.woff" as="font" type="font/woff">
-  <link rel="preload" href="crt.css" as="style">
-  <link rel="preload" href="desktop.css" as="style">
+  <link rel="preload" href="css/crt.css" as="style">
+  <link rel="preload" href="css/desktop.css" as="style">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/98.css">
-
   <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
   <link rel="stylesheet" href="css/all.css">
-
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="css/jquery-ui.css">
@@ -25,10 +22,11 @@
   <script src="js/audio.js"></script>
   <script src="js/apps.js"></script>
 
-  <title>y6T OS</title>
+  <title>Y6t OS</title>
   <meta name="theme-color" content="#000">
+
   <script>
-    var titles = ["y", "y6", "y6t", "is", "a", "number", "1", "skid O", "lol OS",];
+    var titles = ["y", "y6", "y6t", "is", "a", "number", "1", "skid O", "lol OS"];
     var currentIndex = 0;
     function changeTitle() {
       document.title = titles[currentIndex];
@@ -52,6 +50,7 @@
       });
     });
   </script>
+
   <div id="enter">
     <div class="window enter-screen">
       <div class="title-bar">
@@ -65,8 +64,6 @@
           <form>
             <fieldset>
               <legend>Login</legend>
-
-
               <p>Select a user to login to</p>
               <select name="wallpaper" size="1">
                 <option>User</option>
@@ -74,7 +71,6 @@
             </fieldset>
           </form>
         </div>
-
         <div class="window-actions">
           <button class="window-action-button main">OK</button>
         </div>
@@ -91,24 +87,19 @@
       </center>
 
       <div class="desktop-icons">
-        <div class="desktop-icon y6t no-border" onclick="showPopup('Openy6t')" title="y6t">
-          y6t
-        </div>
-
-
+        <div class="desktop-icon y6t no-border" onclick="showPopup('Openy6t')" title="y6t">y6t</div>
       </div>
+
       <div id="toolbar">
         <div class="toolbar-start-menu">
-          <button class="start-button" onclick="toggleStartMenu()"">
-            Start
-          </button>
-
+          <button class="start-button" onclick="toggleStartMenu()">Start</button>
         </div>
+
         <div class="toolbar-separator"></div>
 
         <div class="toolbar-left">
-          <button class="toolbar-icon ie" onclick="showPopup('Openy6t')"></button>
-          <div class="window draggable" id="Openy6t" style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          <button class="toolbar-icon ie" onclick="showPopup('OpenRisk')"></button>
+          <div class="window draggable" id="OpenRisk" style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <div class="title-bar">
               <div class="title-bar-text">y6t</div>
               <div class="title-bar-controls">
@@ -118,120 +109,80 @@
             <div class="window-body">
               <center>
                 <img src="images/y6t.png" height="48px" width="48px">
-                <p>
-                  im skid. | https://t.me/hijackins
-                  <br>
-                 </p>
+                <p>giganigga. | https://t.me/hijackins<br></p>
                 <section class="field-row" style="justify-content: center">
-                  <button class="y6t" aria-label="OK" style="margin-top:10px;">OK</button>
+                  <button class="OKy6t" aria-label="OK" style="margin-top:10px;">OK</button>
                 </section>
               </center>
             </div>
           </div>
+        </div>
+
+        <div class="window draggable" id="OpenFolder" style="margin: 32px; width: 600px; height: 500px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          <div class="title-bar">
+            <div class="title-bar-text">Misc Folder</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button class="CloseFolder" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="folder-body window-body">
+            <div class="folder-content">
+              <div>
+                <img src="images/notepad.png" alt="Image 1" class="folder-image" onclick="NotePadBody('Untitled - Notepad', 'Insert your text here . . .')">
+                <p class="image-caption">notepad.exe</p>
+              </div>
+              <div>
+                <img src="images/HOA.png" alt="Image 2" class="folder-image" onclick="HoaRef()">
+                <p class="image-caption">HOA.exe</p>
+              </div>
+              <div>
+                <img src="images/IMAGE_HERE.png" alt="Image 3" class="CLASS_HERE" onclick="REF_HERE()">
+                <p class="image-caption">NAME_HERE</p>
               </div>
             </div>
-            <div class="folder-body window-body">
-              <div class="folder-content">
-                <div>
-                  <img src="images/notepad.png" alt="Image 1" class="folder-image" onclick="NotePadBody('Untitled - Notepad', 'Insert your text here . . .')">
-                  <p class="image-caption">notepad.exe</p>
-                </div>
-                <div>
-                  <img src="images/HOA.png" alt="Image 2" class="folder-image" onclick="HoaRef()">
-                  <p class="image-caption">HOA.exe</p>
-                </div>
-                <div>
-              </div>
-          </div>
-             <div class="status-bar">
-               <p class="status-bar-field">2 Object(s)</p>
-               <p class="status-bar-field">13.5MB</p>
-             </div>
-           </div>
-   
-         </div>
-
-         <audio id="audio" preload="none" tabindex="0">
-          <source src="media/audio.mp3" data-track-number="1">
-          <source src="media/audio2.mp3" data-track-number="2">
-          <source src="media/audio3.mp3" data-track-number="3">
-        </audio>
-
-        <ul id="trackList" style="display: none;">
-          <li data-track-number="1">i wish that everything would stop - 666SWISH</li>
-          <li data-track-number="2">IM NOT GOD BUT I WISH I WAS - SMOKEDOPE2016</li>
-          <li data-track-number="3">has to be - capzlock</li>
-        </ul>
-
-        <div class="window volume" id="volume" style="position: fixed; width: 200px; display: none;">
-          <div class="title-bar">
-            <div class="title-bar-text">Volume</div>
-          </div>
-          <div class="window-body">
-            <p> Currently playing:</p>
-            <ul id="songInfo">
-              <li id="songTitle">title</li>
-              <li id="songTime">0:00</li>
-              <li><input id="range26" type="range" min="0" max="50" value="50"></li>
-            </ul>
           </div>
           <div class="status-bar">
-            <p id="backward" class="status-bar-field fa-solid fa-backward"></p>
-            <p id="pause" class="status-bar-field fa-solid fa-pause"></p>
-            <p id="forward" class="status-bar-field fa-solid fa-forward"></p>
+            <p class="status-bar-field">2 Object(s)</p>
+            <p class="status-bar-field">13.5MB</p>
           </div>
-
-        </div>
-
-        <div class="toolbar-separator"></div>
-        <div class="toolbar-right field-row" style="width: 106px;">
-          <img src="images/sound.png" alt="Tab" onclick="togglePopup('volume')" height="24" width="">
-
-          <div class="time"><span class="hour"></span>:<span class="minutes"></span> AM</div>
-
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="start-menu" class="start-menu" style="display: none;">
-    <div class="start-menu-wrapper">
-        <div class="start-menu-side-text">
-            <div class="start-menu-win-95-text"><strong>Windows</strong></div>
-            <div class="_95 start-menu-win-95-text"><strong class="_95">95</strong></div>
-        </div>
-        <div class="start-menu-options-column">
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b1c44254eef5b558d0147b_Programs32x32.png" width="41">
-                <div class="programs start-menu-options-text"><span class="program-p">P</span>rograms</div>
-            </div>
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b0bd8e54eef5b558ce88a8_Documents-2032x32.png" width="41">
-                <div class="programs start-menu-options-text"><u>D</u>ocuments</div>
-            </div>
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b0bd8ee18710ca16498bb6_Settings-2032x32.png" width="41">
-                <div class="programs start-menu-options-text"><u>S</u>ettings</div>
-            </div>
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b1c4421fd32dc352b2e255_Find-2032x32.png" width="41">
-                <div class="programs start-menu-options-text"><u>F</u>ind</div>
-            </div>
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b1c442ec62b90517b967cc_Help-2032x32.png" width="41">
-                <div class="programs start-menu-options-text"><u>H</u>elp</div>
-            </div>
-            <div class="start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b0bd8e54eef5b558ce88aa_Run-2032x32.png" width="41">
-                <div class="programs start-menu-options-text"><u>R</u>un</div>
-            </div>
-            <div class="shutdown start-menu-options">
-                <img src="/web/20230411005324im_/https://vile.sh/images/icons/57b0bd8e71bead8852aa8020_Shut-20Down-2032x32.png" width="41">
-                <div class="programs shutdown start-menu-options-text">Shut Down...</div>
-            </div>
-        </div>
-    </div>
-  </div>
-</body>
+      <audio id="audio" preload="none" tabindex="0">
+        <source src="media/audio.mp3" data-track-number="1">
+        <source src="media/audio2.mp3" data-track-number="2">
+        <source src="media/audio3.mp3" data-track-number="3">
+      </audio>
 
-</html>
+      <ul id="trackList" style="display: none;">
+        <li data-track-number="1">i wish that everything would stop - 666SWISH</li>
+        <li data-track-number="2">IM NOT GOD BUT I WISH I WAS - SMOKEDOPE2016</li>
+        <li data-track-number="3">has to be - capzlock</li>
+      </ul>
+
+      <div class="window volume" id="volume" style="position: fixed; width: 200px; display: none;">
+        <div class="title-bar">
+          <div class="title-bar-text">Volume</div>
+        </div>
+        <div class="window-body">
+          <p>Currently playing:</p>
+          <ul id="songInfo">
+            <li id="songTitle">title</li>
+            <li id="songTime">0:00</li>
+            <li><input id="range26" type="range" min="0" max="50" value="50"></li>
+          </ul>
+        </div>
+        <div class="status-bar">
+          <p id="backward" class="status-bar-field fa-solid fa-backward"></p>
+          <p id="pause" class="status-bar-field fa-solid fa-pause"></p>
+          <p id="forward" class="status-bar-field fa-solid fa-forward"></p>
+        </div>
+      </div>
+
+      <div class="toolbar-separator"></div>
+      <div class="toolbar-right field-row" style="width: 106px;">
+        <img src="images/sound.png" alt="Tab" onclick="togglePopup('volume')" height="24" width="">
+
+        <div class="time"><span class="hour"></span>:<span class="minutes"></span> AM
