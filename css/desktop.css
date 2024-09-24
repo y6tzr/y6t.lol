@@ -156,7 +156,7 @@ body {
 }
 
 #toolbar .toolbar-icon.ie {
-  background-image: url(../images/Risk.png);
+  background-image: url(../images/Y6T.png);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   z-index: 100 !important;
@@ -194,7 +194,7 @@ body {
 }
 
 .desktop-icons .desktop-icon.risk {
-  background-image: url(../images/Risk.png);
+  background-image: url(../images/Y6T.png);
   background-repeat: no-repeat;
   background-size: 48px 48px;
   z-index: 100 !important;
